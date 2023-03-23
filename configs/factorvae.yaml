@@ -1,5 +1,5 @@
 model_params:
-  name: 'FactorVAE'
+  name: "FactorVAE"
   in_channels: 3
   latent_dim: 128
   gamma: 6.4
@@ -7,13 +7,12 @@ model_params:
 data_params:
   data_path: "Data/"
   train_batch_size: 64
-  val_batch_size:  64
+  val_batch_size: 64
   patch_size: 64
   num_workers: 4
 
-
 exp_params:
-  submodel: 'discriminator'
+  submodel: "discriminator"
   retain_first_backpass: True
   LR: 0.005
   weight_decay: 0.0
@@ -24,11 +23,9 @@ exp_params:
   manual_seed: 1265
 
 trainer_params:
-  gpus: [1]
+  gpus: [0]
   max_epochs: 10
 
 logging_params:
   save_dir: "logs/"
-  name: "FactorVAE"  
-  
-
+  name: "FactorVAE"

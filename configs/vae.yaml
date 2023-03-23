@@ -1,16 +1,14 @@
 model_params:
-  name: 'VanillaVAE'
+  name: "VanillaVAE"
   in_channels: 3
   latent_dim: 128
-
 
 data_params:
   data_path: "Data/"
   train_batch_size: 64
-  val_batch_size:  64
+  val_batch_size: 64
   patch_size: 64
   num_workers: 4
-
 
 exp_params:
   LR: 0.005
@@ -20,10 +18,9 @@ exp_params:
   manual_seed: 1265
 
 trainer_params:
-  gpus: [1]
+  gpus: [0]
   max_epochs: 100
 
 logging_params:
   save_dir: "logs/"
   name: "VanillaVAE"
-  

@@ -1,19 +1,18 @@
 model_params:
-  name: 'InfoVAE'
+  name: "InfoVAE"
   in_channels: 3
   latent_dim: 128
-  reg_weight: 110  # MMD weight
-  kernel_type: 'imq'
-  alpha: -9.0     # KLD weight
-  beta: 10.5      # Reconstruction weight
+  reg_weight: 110 # MMD weight
+  kernel_type: "imq"
+  alpha: -9.0 # KLD weight
+  beta: 10.5 # Reconstruction weight
 
 data_params:
   data_path: "Data/"
   train_batch_size: 64
-  val_batch_size:  64
+  val_batch_size: 64
   patch_size: 64
   num_workers: 4
-
 
 exp_params:
   LR: 0.005
@@ -23,7 +22,7 @@ exp_params:
   manual_seed: 1265
 
 trainer_params:
-  gpus: [1]
+  gpus: [0]
   max_epochs: 10
   gradient_clip_val: 0.8
 
@@ -31,7 +30,3 @@ logging_params:
   save_dir: "logs/"
   name: "InfoVAE"
   manual_seed: 1265
-
-
-
-
